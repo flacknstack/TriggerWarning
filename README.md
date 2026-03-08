@@ -1,27 +1,29 @@
-# Trigger
-Das Plugin erlaubt es Nutzern einen Trigger für Themen anzugeben und in einer Liste festzuhalten welche eigenen Trigger sie haben. Sollte ein Nutzer auf ein Thema zugreifen wollen, welches durch einen Trigger ausgezeichnet ist, den man auch selber angegeben hat, erfolgt eine Meldung, die darauf aufmerksam macht. An dieser Stelle kann der Nutzer dann entscheiden, ob er das Thema trotzdem lesen oder zurück auf den Index gehen möchte.
+# Triggers
 
-## Funktionen
-__allgemeine Funktionen__
-* Übersichtsseite über Trigger, welche andere Nutzer haben
-* Möglichkeit eigene Trigger anzugeben und zu verwalten
-* in neuen Themen (wenn diese zu dem entsprechenden Bereich gehören) Trigger anzugeben
-* Darstellung der Trigger in der Threadübersicht
-* Darstellung der Trigger in der Themenübersicht
-* Warnung, wenn Thema einen Trigger hat, welchen man selber auch angegeben hat
-* Ausgabe im Profil eines Profilfeldes
-* Übersichtsseite ist aufrufbar über `misc.php?action=trigger`, ich habe eine Verlinkung im UserCP hinzugefügt
+This plugin allows users to specify triggers for topics and keep a list of their own custom triggers. If a user tries to access a topic marked by a trigger that the user has also specified, a notification will appear. The user can then decide whether to read the topic anyway or return to the index.
 
-__Funktionen für Admins__
-* Festlegung für Bereiche in welchen Trigger angegeben werden
 
-## Voraussetzungen
-keine
+``` ## Functions
+__General Functions__
+* Overview page of triggers used by other users
+* Ability to specify and manage your own triggers
+* Ability to specify triggers in new topics (if they belong to the relevant section)
+* Display of triggers in the thread overview
+* Display of triggers in the topic overview
+* Warning if a topic has a trigger that you have also specified
+* Output in a profile field
+* Overview page can be accessed via `misc.php?action=trigger`; I have added a link in the UserCP
 
-## Template-Änderungen
-Zusätzlich wird ein CSS-File mit dem Namen trigger.css angelegt
+__Functions for Admins__
+* Definition of areas in which triggers can be specified
 
-__Neue Templates:__
+## Prerequisites
+None
+
+## Template Changes
+Additionally, a CSS file named trigger.css will be created
+
+__New Templates:__
 * `trigger_forumdisplay`
 * `trigger_memberprofile`
 * `trigger_misc`
@@ -30,25 +32,31 @@ __Neue Templates:__
 * `trigger_show_box_warning`
 * `trigger_showthread`
 
-__Veränderte Templates:__
-* `showthread` (wird um die Variablen `$trigger_box_warning` und `$trigger` erweitert)
-* `member_profile` (wird um die Variable `$trigger` erweitert)
-* `newthread` (wird um die Variable `$trigger` erweitert)
-* `editpost` (wird um die Variable `$trigger` erweitert)
-* `forumdisplay_thread` (wird um die Variable `$trigger` erweitert)
+__Modified Templates:__
 
-## Vorschaubilder
-__Ansicht in der Übersichtsseite__
+* `showthread` (extended with the variables `$trigger_box_warning` and `$trigger`)
+* `member_profile` (extended with the variable `$trigger`)
+* `newthread` (extended with the variable `$trigger`)
+* `editpost` (extended with the variable `$trigger`)
+* `forumdisplay_thread` (extended with the variable `$trigger`)
+
+## Preview Images
+__View on the Overview Page__
+
 ![overview](https://aheartforspinach.de/upload/plugins/trigger_misc_overview.png)
 
-__Ansicht in der Übersichtsseite, Trigger bearbeiten__
+__View on the Overview Page, Trigger Edit__
+
 ![managetrigger](https://aheartforspinach.de/upload/plugins/trigger_misc_manage.png)
 
-__Ansicht in der Threadübersicht__
+__View in Thread Overview__
+
 ![threadoverview](https://aheartforspinach.de/upload/plugins/trigger_Forumdisplay.png)
 
-__Ansicht in Threadansicht__
+__View in Thread View__
+
 ![showthread](https://aheartforspinach.de/upload/plugins/trigger_showthread.png)
 
-__Warnung in der Threadansicht__
+__Warning in Thread View__
+
 ![warning](https://aheartforspinach.de/upload/plugins/trigger_warning.png)
