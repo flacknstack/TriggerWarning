@@ -1,6 +1,6 @@
 <?php
 // general
-$l['trigger_trigger'] = 'Trigger';
+$l['trigger_trigger'] = 'Trigger Warnings';
 $l['trigger_examples'] = 'e.g., death, suicide';
 
 // trigger overlay thread
@@ -10,7 +10,7 @@ $l['trigger_warning'] = 'Warning!';
 $l['trigger_warningText'] = 'This topic contains subjects that you have marked as triggers. <br>Specifically, these are:';
 
 // new thread
-$l['trigger_newthread'] = 'Trigger<br>Also take inspiration from <a href="misc.php?action=trigger" target="_blank">dieser Seite</a>';
+$l['trigger_newthread'] = 'Trigger(s)';
 
 // redirect
 $l['trigger_redirect'] = 'Your changes have been saved.';
