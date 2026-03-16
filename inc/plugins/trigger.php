@@ -7,8 +7,8 @@ if (!defined("IN_MYBB")) {
 function trigger_info()
 {
     return array(
-        "name"            => "Trigger-System",
-        "description"    => "Ermöglicht es Nutzern Trigger festzulegen und weist auf diese hin",
+        "name"            => "Trigger System",
+        "description"    => "Enables users to set triggers and alerts them to them.",
         "author"        => "aheartforspinach",
         "authorsite"    => "https://github.com/aheartforspinach",
         "version"        => "1.0",
@@ -36,7 +36,7 @@ function trigger_install()
     $setting_group = array(
         'name' => 'trigger',
         'title' => 'Trigger',
-        'description' => 'Einstellungen für das Trigger-Plugin',
+        'description' => 'Trigger Plugin Settings',
         'isdefault' => 0
     );
     $db->insert_query('settinggroups', $setting_group);
@@ -44,29 +44,29 @@ function trigger_install()
 
     $setting_array = array(
         'trigger_player_fid' => array(
-            'title' => 'Profilfeld: Spielername',
-            'description' => 'Wie ist die ID für das Profilfeld für den Spielernamen?',
+            'title' => 'Profilfeld: Player Name',
+            'description' => 'What is the ID for the player name profile field?',
             'optionscode' => 'numeric',
             'value' => -99,
             'disporder' => 1
         ),
         'trigger_fid' => array(
-            'title' => 'Profilfeld: Profil-Trigger',
-            'description' => 'Wie ist die ID für das Profilfeld für die Trigger-Angabe im Profil?',
+            'title' => 'Profilfeld: Profile Trigger',
+            'description' => 'What is the ID for the profile field used for the trigger specification in the profile?',
             'optionscode' => 'numeric',
             'value' => -99,
             'disporder' => 2
         ),
         'trigger_excludedUids' => array(
-            'title' => 'Ausgeschlossene Uids',
-            'description' => 'Welche Uids sollen nicht berücksichtigt werden?',
+            'title' => 'Excluded UIDs',
+            'description' => 'Which UIDs should be excluded?',
             'optionscode' => 'text',
             'value' => '-99, -98',
             'disporder' => 3
         ),
         'trigger_forums' => array(
             'title' => 'Forum',
-            'description' => 'In welchen Foren sollen Trigger-Warnungen gegeben werden?',
+            'description' => 'In which forums should trigger warnings be provided?',
             'optionscode' => 'forumselect',
             'value' => '0',
             'disporder' => 4
